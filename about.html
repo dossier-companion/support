@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Dossier does</title>
+<meta name="description" content="A tour of Dossier, the unofficial Arknights companion for iPad and iPhone: its seven chapters, where its data comes from and what stays on your device.">
+<style>
+  :root { --bg: #f7f6f3; --text: #1d1d1b; --muted: #5c5b57; --rule: #d9d7d0; --accent: #2f5d8a; --panel: #efede8; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161615; --text: #ecebe6; --muted: #a3a29c; --rule: #33322f; --accent: #8db6dd; --panel: #1f1f1d; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  a { color: var(--accent); }
+  nav.crumbs { margin-bottom: 32px; color: var(--muted); }
+  nav.toc { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 18px; margin: 24px 0 8px; }
+  nav.toc p { margin: 0 0 6px; font-weight: 600; }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+  nav.toc li { break-inside: avoid; }
+  @media (max-width: 480px) { nav.toc ol { columns: 1; } }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); }
+  th { color: var(--muted); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  .next { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<main>
+<nav class="crumbs"><a href="index.html">Dossier support</a> / Guide</nav>
+
+<h1>What Dossier does</h1>
+<p class="meta">A tour of the app, chapter by chapter · for version 1.0</p>
+
+<p>Dossier is a planning desk for Arknights players, on iPad and iPhone. You tell it which upgrades you want for your operators, and it works out the materials you need and where to farm them. Around that it keeps a recruitment calculator, a news timeline for your server, and two small calculators for sanity and pulls.</p>
+<p>It is free, has no ads and needs no account. Everything you enter stays on your device.</p>
+
+<nav class="toc" aria-label="In this article">
+  <p>In this article</p>
+  <ol>
+    <li><a href="#layout">How the app is laid out</a></li>
+    <li><a href="#operators">Operators</a></li>
+    <li><a href="#materials">Materials</a></li>
+    <li><a href="#stages">Stages &amp; Loot</a></li>
+    <li><a href="#recruit">Recruit</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#planner">Planner</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#servers">Servers</a></li>
+    <li><a href="#data">Where the data comes from</a></li>
+    <li><a href="#device">What stays on your device</a></li>
+  </ol>
+</nav>
+
+<h2 id="layout">How the app is laid out</h2>
+<p>Dossier has seven chapters. Each one is a list and a detail pane.</p>
+<ul>
+  <li><strong>iPad in landscape:</strong> the chapter rail, the list and the detail sit side by side. Drag the divider between the list and the detail to resize them.</li>
+  <li><strong>iPhone, and iPad in portrait:</strong> the three are stacked as layers. Swipe right to slide the detail away and show the list, and right again to reach the chapter rail. Swipe left to go back.</li>
+</ul>
+
+<h2 id="operators">Operators</h2>
+<p>Every operator in the game, with skills, branch traits and modules.</p>
+<ul>
+  <li>Search by name, or filter by branch, faction and the <em>Limited operator</em> tag.</li>
+  <li>Tap <strong>E2</strong>, a skill's <strong>mastery</strong> (S1–S3) or a <strong>module</strong> (X, Y, α) to mark it as a goal. Tap again to remove it.</li>
+  <li>Open a module to read what each of its three stages changes. A second module can be opened beside it to compare.</li>
+  <li><strong>Total materials</strong> adds up what the goals on that operator cost.</li>
+  <li>Mark operators as favourites to keep them close.</li>
+</ul>
+
+<h2 id="materials">Materials</h2>
+<p>One page per material, showing every way to get it:</p>
+<ul>
+  <li>the running event and its stages,</li>
+  <li>an event shop that sells it, if one is open or about to open,</li>
+  <li>the best main-story stage, picked by sanity per drop from your drop rates,</li>
+  <li>the workshop recipe.</li>
+</ul>
+
+<h2 id="stages">Stages &amp; Loot</h2>
+<p>The current event's stages, the next event's, and every main-story stage that drops a regular material.</p>
+<p>Dossier does not ship with a drop-rate table. Each rate is a box you can type a percentage into, or you can fill them all at once: <strong>Settings → On-device data → Fetch</strong> downloads rates from Penguin Statistics for the server you pick. A fetched stage shows the site, server and date it came from, and typing over a fetched rate marks it as edited.</p>
+
+<h2 id="recruit">Recruit</h2>
+<p>A recruitment tag calculator. Pick a tag you rolled and Dossier lists the combinations with it that can give a higher-star operator. The recruitment pool is kept separately for each server, so the results match what your server can actually give.</p>
+
+<h2 id="news">News</h2>
+<p>A timeline of maintenance, events and banners for your server.</p>
+<ul>
+  <li>A banner lists its rate-up operators, each with a button to that operator's page.</li>
+  <li>An event lists what its shop sells without a stock limit.</li>
+  <li>On Global, events and banners that CN has already run appear ahead of time as <em>Predicted</em>, dated from the gap between the two servers. They are replaced once Global announces the real dates.</li>
+</ul>
+
+<h2 id="planner">Planner</h2>
+<p>All your goals from Operators, added into one shopping list grouped by material tier.</p>
+<ul>
+  <li>Enter how many of each material you own. <strong>All owned</strong> and <strong>Clear owned</strong> set the whole list at once.</li>
+  <li>T5 and T4 materials can be broken down into what the workshop needs to craft them.</li>
+  <li>The footer shows what you need, have and still lack, with an estimate of the sanity it will take. The estimate uses your drop rates, and says so when a material has none yet.</li>
+  <li>A material that an open event shop sells without a limit is marked.</li>
+</ul>
+
+<h2 id="settings">Settings</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Section</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>Data</td><td>Shows how recent the game data is. <strong>Refresh now</strong> checks for new operators, events and banners, at most once a day.</td></tr>
+    <tr><td>Sanity</td><td>Your sanity cap, and when your sanity will be full from where it is now.</td></tr>
+    <tr><td>Orundum</td><td>Estimates how many pulls you will have by a banner date, from your orundum, Originite Prime and permits plus daily, weekly and event income. The estimate is deliberately conservative.</td></tr>
+    <tr><td>Recruit</td><td>How the Recruit chapter lists its results.</td></tr>
+    <tr><td>Text</td><td>Font and size for headings and body text. You can add your own fonts from Files.</td></tr>
+    <tr><td>Theme</td><td>Five looks: Glass, Glass · night, Industry, Relic and Candy pop.</td></tr>
+    <tr><td>On-device data</td><td>Fetch drop rates, or clear a group of saved data to start it over.</td></tr>
+    <tr><td>About</td><td>App version and the feedback link.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="servers">Servers</h2>
+<p>Pick your server on the chapter rail: Global, CN, JP, KR or TW. Global, CN and TW each have their own operators, recruitment pool, events and banners. JP and KR show Global's data. Operators and modules that your server doesn't have yet are tagged with the server that does.</p>
+
+<h2 id="data">Where the data comes from</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>What</th><th>Source</th><th>When</th></tr></thead>
+  <tbody>
+    <tr><td>Operators, materials, stages, events, banners</td><td>The game's public data tables, from the ArknightsAssets/ArknightsGamedata repository on GitHub</td><td>When you tap Refresh now, at most once a day</td></tr>
+    <tr><td>Banner line-ups and event shops</td><td>Arknights Terra Wiki</td><td>When you open the app, at most every 6 hours</td></tr>
+    <tr><td>Maintenance and event notices</td><td>The game's own notice lists</td><td>When you open the app, at most hourly</td></tr>
+    <tr><td>Drop rates</td><td>Penguin Statistics, or typed in by you</td><td>Only when you tap Fetch, at most once a day</td></tr>
+  </tbody>
+</table>
+</div>
+<p>The app comes with a copy of the game data, so it works offline from the first launch. It needs a connection only to refresh.</p>
+
+<h2 id="device">What stays on your device</h2>
+<p>Your goals, owned materials, drop rates, favourites and settings are saved on your device only. There is no account, no sync and no tracking. Deleting the app deletes them, and they do not move to a new device. The <a href="privacy.html">privacy policy</a> has the details.</p>
+
+<p class="next">Still stuck? See the <a href="index.html">common questions</a> or write to <a href="mailto:support.dossier@icloud.com">support.dossier@icloud.com</a>.</p>
+
+<p class="meta" style="margin-top:40px">Dossier is an unofficial fan-made tool. It is not affiliated with or endorsed by Hypergryph, Studio Montagne or Yostar. Arknights is a trademark of its respective owners.</p>
+</main>
+</body>
+</html>
